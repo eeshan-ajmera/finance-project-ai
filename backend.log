@@ -1,0 +1,16 @@
+2025-07-01 14:26:00,592 [WARNING]  * Debugger is active!
+2025-07-01 14:26:00,603 [INFO]  * Debugger PIN: 138-776-046
+2025-07-01 14:28:41,075 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.86.44:8000
+2025-07-01 14:28:41,075 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-01 14:28:41,078 [INFO]  * Restarting with stat
+2025-07-01 14:28:52,511 [WARNING]  * Debugger is active!
+2025-07-01 14:28:52,521 [INFO]  * Debugger PIN: 138-776-046
+2025-07-01 14:28:57,359 [INFO] 127.0.0.1 - - [01/Jul/2025 14:28:57] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-01 14:28:59,425 [INFO] 127.0.0.1 - - [01/Jul/2025 14:28:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-01 14:29:17,525 [INFO] 127.0.0.1 - - [01/Jul/2025 14:29:17] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-01 14:29:21,199 [INFO] Symbol resolved directly: AAPL
+2025-07-01 14:30:25,914 [INFO] Prediction complete for AAPL: Predicted $200.99000549316406, Actual $205.17
+2025-07-01 14:30:25,924 [INFO] 127.0.0.1 - - [01/Jul/2025 14:30:25] "POST /predict HTTP/1.1" 200 -
