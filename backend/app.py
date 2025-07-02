@@ -5,7 +5,7 @@ import datetime
 import traceback
 import logging
 import requests
-from google import genai
+import google.generativeai as genai
 import os
 
 from stock_colab import run_full_pipeline
@@ -21,7 +21,8 @@ NEWS_API_KEY = "70b6633e179f485eb0c19c4f6a977fb1"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyDA1avuTfGHXmPLy3rAkdA4RhMWAYBPe04")
 
 # Use new Gemini client
-client = genai.Client(api_key=GEMINI_API_KEY)
+genai.configure(api_key=GEMINI_API_KEY)
+model = genai.GenerativeModel(model_name='gemini-1.5-flash')
 
 # Setup logging
 logging.basicConfig(
@@ -138,15 +139,13 @@ def fetch_gemini_news_summary(symbol, company_name):
         try:
             # Use Gemini Flash (free) as primary
             try:
-                response = client.models.generate_content(
-                    model="gemini-2.5-flash",
-                    contents=prompt
+                response = model.generate_content(
+                    prompt
                 )
             except Exception as e:
-                logging.warning(f"Gemini model 'gemini-2.5-flash' failed: {e}")
-                response = client.models.generate_content(
-                    model="gemini-pro",
-                    contents=prompt
+                logging.warning(f"Gemini model 'gemini-1.5-flash' failed: {e}")
+                response = model.generate_content(
+                    prompt
                 )
             text = response.text
         except Exception as e:
@@ -245,5 +244,5 @@ def health_check():
 if __name__ == "__main__":
     logging.info("🚀 Starting Finance Project Backend...")
     logging.info("📊 TensorFlow and ML models ready")
-    logging.info("🌐 Server will be available at http://localhost:8000")
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    logging.info("🌐 Server will be available at http://localhost:8001")
+    app.run(host="0.0.0.0", port=8001, debug=True)

@@ -180,13 +180,19 @@ const HomePage = ({ query, setQuery, handleSearch, loading, error, result, senti
                 border: 'none',
                 cursor: currentWindow === 0 ? 'not-allowed' : 'pointer',
                 opacity: currentWindow === 0 ? 0.3 : 1,
-                zIndex: 10
+                zIndex: 10,
+                padding: 0,
+                width: 32,
+                height: 32,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
               aria-label="Scroll left"
             >
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="22" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="4" fill="none" />
-                <polyline points="28,16 20,24 28,32" fill="none" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" fill="none" />
+                <polyline points="20,10 12,16 20,22" fill="none" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             {/* Main Card */}
@@ -305,20 +311,26 @@ const HomePage = ({ query, setQuery, handleSearch, loading, error, result, senti
               disabled={currentWindow >= totalWindows - 1}
               style={{
                 position: 'absolute',
-                right: -60,
+                right: -16,
                 top: '50%',
                 transform: 'translateY(-50%)',
                 background: 'none',
                 border: 'none',
                 cursor: currentWindow >= totalWindows - 1 ? 'not-allowed' : 'pointer',
                 opacity: currentWindow >= totalWindows - 1 ? 0.3 : 1,
-                zIndex: 10
+                zIndex: 10,
+                padding: 0,
+                width: 32,
+                height: 32,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
               aria-label="Scroll right"
             >
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="22" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="4" fill="none" />
-                <polyline points="20,16 28,24 20,32" fill="none" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" fill="none" />
+                <polyline points="12,10 20,16 12,22" fill="none" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </div>
