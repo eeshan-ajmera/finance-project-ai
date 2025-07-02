@@ -1,2 +1,2 @@
-node_modules
-backend/venv310/
+/backend/venv310/
+/node_modules/
