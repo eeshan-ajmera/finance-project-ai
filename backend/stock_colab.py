@@ -30,7 +30,7 @@ def download_and_preprocess(ticker, start_date, end_date, window_size=60, predic
     # Add technical indicators
     data['SMA_10'] = data['Close'].rolling(window=10).mean()
     data['SMA_50'] = data['Close'].rolling(window=50).mean()
-    data['RSI'] = ta.momentum.RSIIndicator(close=data['Close'].squeeze(), window=14).rsi()
+    data['RSI'] = ta.momentum.RSIIndicator(close=data['Close'].squeeze(), window=14).rsi()   
     data = data.dropna()
 
     if len(data) < window_size + prediction_days:

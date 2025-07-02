@@ -14,3 +14,25 @@
 2025-07-01 14:29:21,199 [INFO] Symbol resolved directly: AAPL
 2025-07-01 14:30:25,914 [INFO] Prediction complete for AAPL: Predicted $200.99000549316406, Actual $205.17
 2025-07-01 14:30:25,924 [INFO] 127.0.0.1 - - [01/Jul/2025 14:30:25] "POST /predict HTTP/1.1" 200 -
+2025-07-01 15:09:29,862 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.86.44:8000
+2025-07-01 15:09:29,862 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-01 15:09:29,878 [INFO]  * Restarting with stat
+2025-07-01 15:09:42,544 [WARNING]  * Debugger is active!
+2025-07-01 15:09:42,570 [INFO]  * Debugger PIN: 138-904-221
+2025-07-01 15:09:43,307 [INFO] 127.0.0.1 - - [01/Jul/2025 15:09:43] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-01 15:09:47,109 [INFO] Symbol resolved directly: TSLA
+2025-07-01 15:10:48,436 [INFO] Prediction complete for TSLA: Predicted $325.57000732421875, Actual $317.66
+2025-07-01 15:10:48,445 [INFO] 127.0.0.1 - - [01/Jul/2025 15:10:48] "POST /predict HTTP/1.1" 200 -
+2025-07-01 16:49:43,597 [INFO]  * Detected change in 'C:\\Users\\eesha\\OneDrive\\Documents\\GitHub\\finance-project-v2\\backend\\app.py', reloading
+2025-07-01 16:50:00,829 [INFO]  * Restarting with stat
+2025-07-02 12:18:10,901 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.86.44:8000
+2025-07-02 12:18:10,902 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-02 12:18:10,916 [INFO]  * Restarting with stat
+2025-07-02 12:18:24,589 [WARNING]  * Debugger is active!
+2025-07-02 12:18:24,624 [INFO]  * Debugger PIN: 138-904-221
