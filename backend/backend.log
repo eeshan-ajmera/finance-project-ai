@@ -24,3 +24,17 @@
 2025-07-02 12:51:27,585 [INFO] 🌐 Server will be available at http://localhost:8001
 2025-07-02 12:51:27,598 [WARNING]  * Debugger is active!
 2025-07-02 12:51:27,617 [INFO]  * Debugger PIN: 749-811-642
+2025-07-02 13:37:38,263 [INFO] 🚀 Starting Finance Project Backend...
+2025-07-02 13:37:38,263 [INFO] 📊 TensorFlow and ML models ready
+2025-07-02 13:37:38,263 [INFO] 🌐 Server will be available at http://localhost:8001
+2025-07-02 13:37:38,366 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.1.15:8001
+2025-07-02 13:37:38,366 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-02 13:37:38,367 [INFO]  * Restarting with stat
+2025-07-02 13:37:53,800 [INFO] 🚀 Starting Finance Project Backend...
+2025-07-02 13:37:53,801 [INFO] 📊 TensorFlow and ML models ready
+2025-07-02 13:37:53,801 [INFO] 🌐 Server will be available at http://localhost:8001
+2025-07-02 13:37:53,874 [WARNING]  * Debugger is active!
+2025-07-02 13:37:53,913 [INFO]  * Debugger PIN: 749-811-642
