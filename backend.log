@@ -36,3 +36,7 @@
 2025-07-02 12:18:10,916 [INFO]  * Restarting with stat
 2025-07-02 12:18:24,589 [WARNING]  * Debugger is active!
 2025-07-02 12:18:24,624 [INFO]  * Debugger PIN: 138-904-221
+2025-07-02 12:19:31,771 [INFO] 127.0.0.1 - - [02/Jul/2025 12:19:31] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-02 12:19:35,779 [INFO] Symbol resolved directly: AAPL
+2025-07-02 12:20:30,598 [INFO] Prediction complete for AAPL: Predicted $202.9600067138672, Actual $207.82
+2025-07-02 12:20:30,606 [INFO] 127.0.0.1 - - [02/Jul/2025 12:20:30] "POST /predict HTTP/1.1" 200 -
