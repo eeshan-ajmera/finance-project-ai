@@ -130,3 +130,5 @@ ValueError: Could not find a ticker symbol for 'GITLAB'. Please try a valid stoc
 2025-07-02 20:13:40,725 [INFO] Symbol resolved directly: GTLB
 2025-07-02 20:13:42,682 [INFO] 127.0.0.1 - - [02/Jul/2025 20:13:42] "POST /news HTTP/1.1" 200 -
 2025-07-02 20:13:42,983 [INFO] 127.0.0.1 - - [02/Jul/2025 20:13:42] "POST /news HTTP/1.1" 200 -
+2025-07-02 20:22:11,403 [INFO]  * Detected change in 'C:\\Users\\eesha\\OneDrive\\Documents\\GitHub\\finance-project-v2\\backend\\app.py', reloading
+2025-07-02 23:57:43,486 [INFO]  * Restarting with stat
