@@ -132,3 +132,31 @@ ValueError: Could not find a ticker symbol for 'GITLAB'. Please try a valid stoc
 2025-07-02 20:13:42,983 [INFO] 127.0.0.1 - - [02/Jul/2025 20:13:42] "POST /news HTTP/1.1" 200 -
 2025-07-02 20:22:11,403 [INFO]  * Detected change in 'C:\\Users\\eesha\\OneDrive\\Documents\\GitHub\\finance-project-v2\\backend\\app.py', reloading
 2025-07-02 23:57:43,486 [INFO]  * Restarting with stat
+2025-07-03 00:00:14,142 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.86.44:8001
+2025-07-03 00:00:14,143 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-03 00:00:14,162 [INFO]  * Restarting with stat
+2025-07-03 00:00:52,574 [WARNING]  * Debugger is active!
+2025-07-03 00:00:52,605 [INFO]  * Debugger PIN: 138-904-221
+2025-07-03 00:00:54,960 [INFO] 127.0.0.1 - - [03/Jul/2025 00:00:54] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-03 00:01:02,557 [INFO] Symbol resolved directly: MSFT
+2025-07-03 00:02:59,425 [INFO] Prediction complete for MSFT: Predicted $494.3999938964844, Actual $491.09
+2025-07-03 00:02:59,468 [INFO] 127.0.0.1 - - [03/Jul/2025 00:02:59] "POST /predict HTTP/1.1" 200 -
+2025-07-03 00:03:08,759 [INFO] 127.0.0.1 - - [03/Jul/2025 00:03:08] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-03 00:03:08,768 [INFO] 127.0.0.1 - - [03/Jul/2025 00:03:08] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-03 00:03:09,438 [INFO] Symbol resolved directly: MSFT
+2025-07-03 00:03:09,445 [INFO] Symbol resolved directly: MSFT
+2025-07-03 00:03:11,572 [INFO] 127.0.0.1 - - [03/Jul/2025 00:03:11] "POST /news HTTP/1.1" 200 -
+2025-07-03 00:03:13,945 [INFO] 127.0.0.1 - - [03/Jul/2025 00:03:13] "POST /news HTTP/1.1" 200 -
+2025-07-03 00:18:24,522 [INFO] 127.0.0.1 - - [03/Jul/2025 00:18:24] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-03 00:18:24,965 [INFO] Symbol resolved directly: TSLA
+2025-07-03 00:20:33,393 [INFO] Prediction complete for TSLA: Predicted $308.2099914550781, Actual $315.65
+2025-07-03 00:20:33,412 [INFO] 127.0.0.1 - - [03/Jul/2025 00:20:33] "POST /predict HTTP/1.1" 200 -
+2025-07-03 00:48:42,368 [INFO] 127.0.0.1 - - [03/Jul/2025 00:48:42] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-03 00:48:42,385 [INFO] 127.0.0.1 - - [03/Jul/2025 00:48:42] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-03 00:48:42,866 [INFO] Symbol resolved directly: TSLA
+2025-07-03 00:48:42,871 [INFO] Symbol resolved directly: TSLA
+2025-07-03 00:48:44,897 [INFO] 127.0.0.1 - - [03/Jul/2025 00:48:44] "POST /news HTTP/1.1" 200 -
+2025-07-03 00:48:45,093 [INFO] 127.0.0.1 - - [03/Jul/2025 00:48:45] "POST /news HTTP/1.1" 200 -
