@@ -5,7 +5,7 @@ import datetime
 import traceback
 import logging
 import requests
-import google.generativeai as genai
+from google import generativeai as genai
 import os
 
 from stock_colab import run_full_pipeline
@@ -99,13 +99,13 @@ def fetch_news_and_sentiment(symbol, company_name):
             pos = sum(any(w in h.lower() for w in pos_words) for h in headlines)
             neg = sum(any(w in h.lower() for w in neg_words) for h in headlines)
             if pos > neg:
-                sentiment = "positive"
+                sentiment = "Positive"
                 summary = f"Recent news sentiment is positive, suggesting an upward trajectory for the stock."
             elif neg > pos:
-                sentiment = "negative"
+                sentiment = "Negative"
                 summary = f"Recent news sentiment is negative, suggesting a downward trajectory for the stock."
             else:
-                sentiment = "neutral"
+                sentiment = "Neutral"
                 summary = f"Recent news sentiment is mixed or neutral."
             return sentiment, summary, headlines, sources
     except Exception as e:
@@ -127,9 +127,9 @@ def fetch_gemini_news_summary(symbol, company_name):
         links = [a["url"] for a in articles]
         prompt = f"""
         Analyze the following news headlines for {company_name} ({symbol}) and provide:
-        1. A one-sentence summary of the overall market sentiment (positive/negative/neutral).
-        2. A very short, simple, and clear summary of the news and its likely effect on the stock price. Make it one or two sentences, easy to read, and avoid long paragraphs.
-        3. List the most relevant news articles with their titles and URLs.
+        1. A one-sentence summary of the overall market sentiment (positive/negative/neutral). then take a space
+        2. A very short, simple, and clear summary of the news and its likely effect on the stock price. Make it three-four sentences, easy to read, and avoid long paragraphs.
+        3. Make sure the information is accurate and relevant to the stock market, as well as easy to read and understand by people who may not be experts in the field. Make sure to also keep it professional
         Make sure there are no bold characters, letters, or words in your response.
         Headlines:
         {chr(10).join(headlines)}

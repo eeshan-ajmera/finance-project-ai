@@ -40,3 +40,93 @@
 2025-07-02 12:19:35,779 [INFO] Symbol resolved directly: AAPL
 2025-07-02 12:20:30,598 [INFO] Prediction complete for AAPL: Predicted $202.9600067138672, Actual $207.82
 2025-07-02 12:20:30,606 [INFO] 127.0.0.1 - - [02/Jul/2025 12:20:30] "POST /predict HTTP/1.1" 200 -
+2025-07-02 14:36:41,174 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.86.44:8001
+2025-07-02 14:36:41,175 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-02 14:36:41,179 [INFO]  * Restarting with stat
+2025-07-02 14:36:53,512 [WARNING]  * Debugger is active!
+2025-07-02 14:36:53,525 [INFO]  * Debugger PIN: 138-904-221
+2025-07-02 15:11:22,526 [INFO] 127.0.0.1 - - [02/Jul/2025 15:11:22] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-02 15:11:26,874 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:13:00,385 [INFO] Prediction complete for AAPL: Predicted $204.1300048828125, Actual $207.82
+2025-07-02 15:13:00,399 [INFO] 127.0.0.1 - - [02/Jul/2025 15:13:00] "POST /predict HTTP/1.1" 200 -
+2025-07-02 15:13:24,451 [INFO] 127.0.0.1 - - [02/Jul/2025 15:13:24] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 15:13:24,456 [INFO] 127.0.0.1 - - [02/Jul/2025 15:13:24] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 15:13:24,974 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:13:24,995 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:13:28,717 [INFO] 127.0.0.1 - - [02/Jul/2025 15:13:28] "POST /news HTTP/1.1" 200 -
+2025-07-02 15:13:28,957 [INFO] 127.0.0.1 - - [02/Jul/2025 15:13:28] "POST /news HTTP/1.1" 200 -
+2025-07-02 15:14:09,005 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:09] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 15:14:09,011 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:09] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 15:14:09,524 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:14:09,549 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:14:12,848 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:12] "POST /news HTTP/1.1" 200 -
+2025-07-02 15:14:13,855 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:13] "POST /news HTTP/1.1" 200 -
+2025-07-02 15:14:30,930 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:30] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 15:14:30,937 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:30] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 15:14:31,407 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:14:31,440 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:14:34,519 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:34] "POST /news HTTP/1.1" 200 -
+2025-07-02 15:14:34,969 [INFO] 127.0.0.1 - - [02/Jul/2025 15:14:34] "POST /news HTTP/1.1" 200 -
+2025-07-02 15:55:21,911 [INFO] 127.0.0.1 - - [02/Jul/2025 15:55:21] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-02 15:55:22,440 [INFO] Symbol resolved directly: AAPL
+2025-07-02 15:56:48,090 [INFO] Prediction complete for AAPL: Predicted $204.49000549316406, Actual $207.82
+2025-07-02 15:56:48,098 [INFO] 127.0.0.1 - - [02/Jul/2025 15:56:48] "POST /predict HTTP/1.1" 200 -
+2025-07-02 19:21:48,417 [INFO] 127.0.0.1 - - [02/Jul/2025 19:21:48] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-02 19:21:48,966 [INFO] Symbol resolved directly: AAPL
+2025-07-02 19:23:17,448 [WARNING] 5 out of the last 17 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001DE90AE8360> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-07-02 19:23:19,224 [INFO] Prediction complete for AAPL: Predicted $202.66000366210938, Actual $207.82
+2025-07-02 19:23:19,251 [INFO] 127.0.0.1 - - [02/Jul/2025 19:23:19] "POST /predict HTTP/1.1" 200 -
+2025-07-02 19:33:35,251 [INFO] 127.0.0.1 - - [02/Jul/2025 19:33:35] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-02 19:33:35,798 [INFO] Symbol resolved directly: AAPL
+2025-07-02 19:35:13,672 [WARNING] 5 out of the last 17 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001DE90A1FCE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-07-02 19:35:14,817 [INFO] Prediction complete for AAPL: Predicted $204.0500030517578, Actual $207.82
+2025-07-02 19:35:14,835 [INFO] 127.0.0.1 - - [02/Jul/2025 19:35:14] "POST /predict HTTP/1.1" 200 -
+2025-07-02 19:36:06,377 [INFO] 127.0.0.1 - - [02/Jul/2025 19:36:06] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 19:36:06,385 [INFO] 127.0.0.1 - - [02/Jul/2025 19:36:06] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 19:36:06,869 [INFO] Symbol resolved directly: AAPL
+2025-07-02 19:36:06,930 [INFO] Symbol resolved directly: AAPL
+2025-07-02 19:36:10,938 [INFO] 127.0.0.1 - - [02/Jul/2025 19:36:10] "POST /news HTTP/1.1" 200 -
+2025-07-02 19:36:11,074 [INFO] 127.0.0.1 - - [02/Jul/2025 19:36:11] "POST /news HTTP/1.1" 200 -
+2025-07-02 20:00:39,237 [INFO] 127.0.0.1 - - [02/Jul/2025 20:00:39] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 20:00:39,251 [INFO] 127.0.0.1 - - [02/Jul/2025 20:00:39] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 20:00:40,010 [INFO] Symbol resolved directly: AAPL
+2025-07-02 20:00:40,029 [INFO] Symbol resolved directly: AAPL
+2025-07-02 20:00:45,247 [INFO] 127.0.0.1 - - [02/Jul/2025 20:00:45] "POST /news HTTP/1.1" 200 -
+2025-07-02 20:00:45,534 [INFO] 127.0.0.1 - - [02/Jul/2025 20:00:45] "POST /news HTTP/1.1" 200 -
+2025-07-02 20:04:12,677 [INFO]  * Detected change in 'C:\\Users\\eesha\\OneDrive\\Documents\\GitHub\\finance-project-v2\\backend\\app.py', reloading
+2025-07-02 20:09:18,951 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.86.44:8001
+2025-07-02 20:09:18,952 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-02 20:09:18,963 [INFO]  * Restarting with stat
+2025-07-02 20:09:30,428 [WARNING]  * Debugger is active!
+2025-07-02 20:09:30,446 [INFO]  * Debugger PIN: 138-904-221
+2025-07-02 20:10:20,405 [INFO] 127.0.0.1 - - [02/Jul/2025 20:10:20] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-02 20:10:21,298 [ERROR] HTTP Error 404: 
+2025-07-02 20:10:21,693 [ERROR] $GITLAB: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-02 20:10:21,694 [WARNING] yfinance search failed for GITLAB: module 'yfinance.utils' has no attribute 'get_ticker_by_name'
+2025-07-02 20:10:21,695 [ERROR] Could not find a ticker symbol for 'GITLAB'.
+2025-07-02 20:10:21,696 [ERROR] Error in /predict route: Could not find a ticker symbol for 'GITLAB'. Please try a valid stock symbol like AAPL, GOOGL, etc.
+Traceback (most recent call last):
+  File "C:\Users\eesha\OneDrive\Documents\GitHub\finance-project-v2\backend\app.py", line 178, in predict_stock
+    symbol = get_stock_symbol(user_input)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eesha\OneDrive\Documents\GitHub\finance-project-v2\backend\app.py", line 81, in get_stock_symbol
+    raise ValueError(f"Could not find a ticker symbol for '{name_or_symbol}'. Please try a valid stock symbol like AAPL, GOOGL, etc.")
+ValueError: Could not find a ticker symbol for 'GITLAB'. Please try a valid stock symbol like AAPL, GOOGL, etc.
+
+2025-07-02 20:10:21,697 [INFO] 127.0.0.1 - - [02/Jul/2025 20:10:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-07-02 20:10:55,493 [INFO] 127.0.0.1 - - [02/Jul/2025 20:10:55] "OPTIONS /predict HTTP/1.1" 200 -
+2025-07-02 20:10:58,796 [INFO] Symbol resolved directly: GTLB
+2025-07-02 20:11:38,712 [INFO] Prediction complete for GTLB: Predicted $45.02000045776367, Actual $45.51
+2025-07-02 20:11:38,717 [INFO] 127.0.0.1 - - [02/Jul/2025 20:11:38] "POST /predict HTTP/1.1" 200 -
+2025-07-02 20:13:40,271 [INFO] 127.0.0.1 - - [02/Jul/2025 20:13:40] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 20:13:40,275 [INFO] 127.0.0.1 - - [02/Jul/2025 20:13:40] "OPTIONS /news HTTP/1.1" 200 -
+2025-07-02 20:13:40,655 [INFO] Symbol resolved directly: GTLB
+2025-07-02 20:13:40,725 [INFO] Symbol resolved directly: GTLB
+2025-07-02 20:13:42,682 [INFO] 127.0.0.1 - - [02/Jul/2025 20:13:42] "POST /news HTTP/1.1" 200 -
+2025-07-02 20:13:42,983 [INFO] 127.0.0.1 - - [02/Jul/2025 20:13:42] "POST /news HTTP/1.1" 200 -

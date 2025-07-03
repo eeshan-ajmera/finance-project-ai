@@ -4,6 +4,7 @@ import {
   LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
+
 interface Article {
   title: string;
 }
@@ -167,46 +168,22 @@ const HomePage = ({ query, setQuery, handleSearch, loading, error, result, senti
         )}
         {result && (
           <div style={{ position: 'relative', width: '100%', maxWidth: 800, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {/* Left Arrow */}
-            <button
-              onClick={() => setWindowStart(Math.max(0, currentWindow - 1))}
-              disabled={currentWindow === 0}
-              style={{
-                position: 'absolute',
-                left: -60,
-                top: '50%',
-                transform: 'translateY(-50%)',
-                background: 'none',
-                border: 'none',
-                cursor: currentWindow === 0 ? 'not-allowed' : 'pointer',
-                opacity: currentWindow === 0 ? 0.3 : 1,
-                zIndex: 10,
-                padding: 0,
-                width: 32,
-                height: 32,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-              aria-label="Scroll left"
-            >
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="14" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" fill="none" />
-                <polyline points="20,10 12,16 20,22" fill="none" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
+  
             {/* Main Card */}
             <div style={{ flex: 1 }}>
               <div
                 className="stock-card"
               >
                 <h2 style={{ 
+                  fontFamily: "'Georgia', Times New Roman",
+                  position: 'relative',
+                  top: '-20px',
                   color: '#00bcd4', 
-                  fontSize: '2rem', 
+                  fontSize: '2.1rem', 
                   marginBottom: '1.5rem',
                   textAlign: 'center',
                   fontWeight: 700,
-                  letterSpacing: 1
+                  letterSpacing: 1.45
                 }}>
                   {result.symbol}
                 </h2>
@@ -272,67 +249,183 @@ const HomePage = ({ query, setQuery, handleSearch, loading, error, result, senti
                   </div>
                 </div>
                 {/* Chart */}
-                {result.historical && result.historical.length > 0 && (
-                  <div style={{ 
-                    background: 'rgba(24, 28, 47, 0.92)', 
-                    borderRadius: '12px', 
-                    padding: '1.5rem', 
-                    margin: '2rem 0',
+      {result.historical && result.historical.length > 0 && (
+        <div
+          style={{
+            position: 'relative',    // positioning context for both arrows
+            margin: '2rem 0',        // vertical spacing
+          }}
+        >
+          {/* ← Left Arrow */}
+          <button
+            onClick={() => setWindowStart(Math.max(0, currentWindow - 1))}
+            disabled={currentWindow === 0}
+            style={{
+              position: 'absolute',
+              left: -20,
+              top: '50%',
+              transform: 'translate(-50%, -50%)',
+              background: 'none',
+              border: 'none',
+              cursor: currentWindow === 0 ? 'not-allowed' : 'pointer',
+              opacity: currentWindow === 0 ? 0.3 : 1,
+              width: 32,
+              height: 32,
+              padding: 0,
+              zIndex: 2
+            }}
+            aria-label="Scroll left"
+          >
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle
+                cx="16"
+                cy="16"
+                r="14"
+                stroke={
+                  sentiment === 'positive'
+                    ? '#4caf50'
+                    : sentiment === 'negative'
+                    ? '#f44336'
+                    : '#00bcd4'
+                }
+                strokeWidth="3"
+                fill="none"
+              />
+              <polyline
+                points="20,10 12,16 20,22"
+                stroke={
+                  sentiment === 'positive'
+                    ? '#4caf50'
+                    : sentiment === 'negative'
+                    ? '#f44336'
+                    : '#00bcd4'
+                }
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+
+          {/* Chart Container */}
+          <div
+            style={{
+              background: 'rgba(24, 28, 47, 0.92)',
+              borderRadius: '12px',
+              border: '1px solid #00bcd4',
+              padding: '1.5rem'
+            }}
+          >
+            <h3
+              style={{
+                color: '#00bcd4',
+                textAlign: 'center',
+                marginBottom: '1rem',
+                fontWeight: 600
+              }}
+            >
+              Historical vs Predicted Prices
+            </h3>
+
+            <ResponsiveContainer width="100%" height={320}>
+              <LineChart data={visibleData}>
+                <XAxis
+                  dataKey="date"
+                  stroke="#8884d8"
+                  tick={{ fontSize: 12 }}
+                  interval={Math.max(0, Math.floor(visibleData.length / 6) - 1)}
+                />
+                <YAxis
+                  stroke="#8884d8"
+                  domain={[yMin, yMax]}
+                  tickFormatter={(v: number) => v.toFixed(3)}
+                />
+                <Tooltip
+                  contentStyle={{
+                    background: '#1a1d2b',
                     border: '1px solid #00bcd4',
-                    position: 'relative'
-                  }}>
-                    <h3 style={{ color: '#00bcd4', textAlign: 'center', marginBottom: '1rem', fontWeight: 600 }}>
-                      Historical vs Predicted Prices
-                    </h3>
-                    <ResponsiveContainer width="100%" height={320}>
-                      <LineChart data={visibleData}>
-                        <XAxis dataKey="date" stroke="#8884d8" tick={{ fontSize: 12 }} interval={Math.max(0, Math.floor(visibleData.length / 6) - 1)} />
-                        <YAxis stroke="#8884d8" domain={[yMin, yMax]} tickFormatter={(v: number) => v.toFixed(3)} />
-                        <Tooltip 
-                          contentStyle={{
-                            background: '#1a1d2b',
-                            border: '1px solid #00bcd4',
-                            borderRadius: '8px'
-                          }}
-                          formatter={(v: number) => v.toFixed(3)}
-                        />
-                        <Legend />
-                        <Line type="monotone" dataKey="actual" stroke="#00bcd4" name="Actual Price" strokeWidth={3} dot={false} />
-                        <Line type="monotone" dataKey="predicted" stroke="#82ca9d" name="Predicted Price" strokeWidth={3} dot={false} />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  </div>
-                )}
-              </div>
+                    borderRadius: '8px'
+                  }}
+                  formatter={(v: number) => v.toFixed(3)}
+                />
+                <Legend />
+                <Line
+                  type="monotone"
+                  dataKey="actual"
+                  stroke="#00bcd4"
+                  name="Actual Price"
+                  strokeWidth={3}
+                  dot={false}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="predicted"
+                  stroke="#82ca9d"
+                  name="Predicted Price"
+                  strokeWidth={3}
+                  dot={false}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* → Right Arrow */}
+          <button
+            onClick={() => setWindowStart(Math.min(totalWindows - 1, currentWindow + 1))}
+            disabled={currentWindow >= totalWindows - 1}
+            style={{
+              position: 'absolute',
+              right: -20,
+              top: '50%',
+              transform: 'translate(50%, -50%)',
+              background: 'none',
+              border: 'none',
+              cursor:
+                currentWindow >= totalWindows - 1 ? 'not-allowed' : 'pointer',
+              opacity: currentWindow >= totalWindows - 1 ? 0.3 : 1,
+              width: 32,
+              height: 32,
+              padding: 0,
+              zIndex: 2
+            }}
+            aria-label="Scroll right"
+          >
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle
+                cx="16"
+                cy="16"
+                r="14"
+                stroke={
+                  sentiment === 'positive'
+                    ? '#4caf50'
+                    : sentiment === 'negative'
+                    ? '#f44336'
+                    : '#00bcd4'
+                }
+                strokeWidth="3"
+                fill="none"
+              />
+              <polyline
+                points="12,10 20,16 12,22"
+                stroke={
+                  sentiment === 'positive'
+                    ? '#4caf50'
+                    : sentiment === 'negative'
+                    ? '#f44336'
+                    : '#00bcd4'
+                }
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      )}
+                    </div>
             </div>
             {/* Right Arrow */}
-            <button
-              onClick={() => setWindowStart(Math.min(totalWindows - 1, currentWindow + 1))}
-              disabled={currentWindow >= totalWindows - 1}
-              style={{
-                position: 'absolute',
-                right: -16,
-                top: '50%',
-                transform: 'translateY(-50%)',
-                background: 'none',
-                border: 'none',
-                cursor: currentWindow >= totalWindows - 1 ? 'not-allowed' : 'pointer',
-                opacity: currentWindow >= totalWindows - 1 ? 0.3 : 1,
-                zIndex: 10,
-                padding: 0,
-                width: 32,
-                height: 32,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-              aria-label="Scroll right"
-            >
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="14" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" fill="none" />
-                <polyline points="12,10 20,16 12,22" fill="none" stroke={sentiment === 'positive' ? '#4caf50' : sentiment === 'negative' ? '#f44336' : '#00bcd4'} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
+            
           </div>
         )}
       </div>
@@ -455,7 +548,7 @@ const MarketNewsPage = ({ query, result, sentiment, setSentiment }: { query: str
     setLoading(true);
     setError('');
     setNews(null);
-    axios.post('http://localhost:8000/news', { stock: query })
+    axios.post('http://localhost:8001/news', { stock: query })
       .then(res => {
         setNews(res.data);
         setSentiment(res.data.sentiment || 'neutral');
@@ -536,7 +629,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/predict', {
+      const response = await axios.post('http://localhost:8001/predict', {
         stock: query.trim(),
         range: '1_day'
       });
