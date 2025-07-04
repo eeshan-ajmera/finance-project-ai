@@ -1,5 +1,10 @@
-flask
-flask-cors
+Flask
+Flask-Cors
 yfinance
-google-generativeai
+requests
+google-generativeai:contentReference[oaicite:0]{index=0}
+numpy
+pandas
+scikit-learn
 tensorflow
+ta:contentReference[oaicite:1]{index=1}
