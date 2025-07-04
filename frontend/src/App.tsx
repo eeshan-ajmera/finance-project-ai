@@ -767,7 +767,7 @@ const MarketNewsPage = ({ query, result, sentiment, setSentiment }: { query: str
     setLoading(true);
     setError('');
     setNews(null);
-    axios.post('http://localhost:8001/news', { stock: query })
+    axios.post('https://finance-backend.onrender.com/predict', { stock: query })
       .then(res => {
         setNews(res.data);
         setSentiment(res.data.sentiment || 'neutral');
