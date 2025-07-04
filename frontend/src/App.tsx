@@ -365,7 +365,9 @@ const HomePage = ({ query, setQuery, handleSearch, loading, error, result, senti
                 }}>
                   <span style={{ color: '#f857a6', fontWeight: 600, fontSize: '1.05rem', marginBottom: 6, opacity: 0.92 }}>Margin of Error</span>
                   <span style={{ fontSize: '2.1rem', color: '#e8f1f9', fontWeight: 800, letterSpacing: 1 }}>
-                    {result.margin_of_error !== undefined ? `${result.margin_of_error.toFixed(2)}%` : '--'}
+                    {result.predicted_next_day_close !== undefined && result.margin_of_error !== undefined
+                      ? `$${(result.predicted_next_day_close * result.margin_of_error / 100).toFixed(2)}`
+                      : '--'}
                   </span>
                 </div>
               </div>
